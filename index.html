@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<header>
 
+<header>
     <div class="container">
         <div class="header_ttl">
             <h1>Awesome <br> Cosmetic</h1>
@@ -25,11 +25,11 @@
             </div>
             <div class="header_list">
                 <ul>
-                    <li class="active">About</li>
-                    <li>Staff</li>
-                    <li>Menu</li>
-                    <li>Blog</li>
-                    <li>Access</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Access</a></li>
                 </ul>
             </div>
             <div class="header_list_sp">
@@ -41,7 +41,7 @@
 
                 <nav class="globalMenuSp">
                     <ul>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#">Staff</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Blog</a></li>
@@ -51,9 +51,10 @@
             </div>
         </nav>
         <a href="#about"><img id="top_arrow" src="img/arrow.png" alt="arrow"></a>
-    </div>
 
 </header>
+</div>
+
 <main>
     <section id="about">
         <div class="about">
@@ -68,9 +69,9 @@
                             </dd>
                         </dl>
                     </div>
-                   
+                    <figure>
                         <img class="flex_item" src="img/about.png" alt="about">
-                
+                    </figure>
                 </div>
             </div>
 
@@ -83,16 +84,16 @@
                     <h3>Item</h3>
                     <p class="txt_ja">アイテム</p>
                 </div>
-                <div class="wrapper">
-                    <article class="content">
+                <ul class="wrapper">
+                    <li class="content">
                         <figure>
                             <img src="img/item_1.png" alt="item_1">
                             <figcaption class="img_ttl">ファンデーション</figcaption>
                         </figure>
                         <h4>商品名</h4>
                         <p class="txt_ja item_txt">この商品の説明。この商品の説明。この商品の説明。この商品の説明。この商品の説明。この商品の説明。</p>
-                    </article>
-                    <article class="content">
+                    </li>
+                    <li class="content">
                         <figure>
                             <img src="img/item_2.png" alt="item_2">
                             <figcaption class="img_ttl">リップ</figcaption>
@@ -100,16 +101,16 @@
                         <h4>コスメ2コスメ2コスメ2コスメ2コスメ2</h4>
                         <p class="txt_ja item_txt">商品について商品について商品について商品について商品について商品について
                         </p>
-                    </article>
-                    <article class="content">
+                    </li>
+                    <li class="content">
                         <figure>
                             <img src="img/item_3.png" alt="item_3">
                             <figcaption class="img_ttl">アイシャドー</figcaption>
                         </figure>
                         <h4>コスメ3コスメ3コスメ3コスメ3</h4>
                         <p class="txt_ja item_txt">真ん中真ん中真ん中真ん中真ん中真ん中真ん中真ん中真ん中真ん中真ん中</p>
-                    </article>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -159,26 +160,32 @@
                     <h3>Blog</h3>
                     <p class="txt_ja">ブログ</p>
                 </div>
-                <div class="wrapper">
-                    <aritcle class="content">
+                <ul class="wrapper">
+                    <li class="content">
                         <figure>
                             <img src="img/blog_1.png" alt="blog_1"></figure>
                         <time class="blog_date">2019/12/3</time><span class="blog_ttl txt_ja">お悩み</span>
                         <p class="txt_ja blog_txt">1月の営業日ご案内。</p>
-                    </aritcle>
-                    <aritcle class="content">
+                    </li>
+                    <li class="content">
                         <figure>
                             <img src="img/blog_2.png" alt="blog_2"></figure>
                         <time class="blog_date">2019/11/2</time><span class="blog_ttl txt_ja">お悩み</span>
                         <p class="txt_ja blog_txt">12月の営業日ご案内。</p>
-                    </aritcle>
-                    <aritcle class="content">
+                    </li>
+                    <li class="content">
                         <figure>
                             <img src="img/blog_3.png" alt="blog_3"></figure>
                         <time class="blog_date">2019/11/2</time><span class="blog_ttl txt_ja">プレスリリース</span>
                         <p class="txt_ja blog_txt">メイク始めました。</p>
-                    </aritcle>
-                </div>
+                    </li>
+                    <li class="content">
+                        <figure>
+                            <img src="img/blog_3.png" alt="blog_3"></figure>
+                        <time class="blog_date">2019/11/2</time><span class="blog_ttl txt_ja">プレスリリース</span>
+                        <p class="txt_ja blog_txt">メイク始めました。</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -200,30 +207,34 @@
                         <dt>OFF TIME</dt>
                         <dd class="txt_ja">土曜日曜祝日</dd>
                     </dl>
-                    <figure>
-                        <img src="img/access.png" alt="access">
-                    </figure>
+                    <p class="ex_direction ">行き方の説明</p>
+                    
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.9491302360043!2d135.49557386523244!3d34.70646298043315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e691c5c21a61%3A0x426587edd82ea9dc!2z44CSNTMwLTAwMTIg5aSn6Ziq5bqc5aSn6Ziq5biC5YyX5Yy66Iqd55Sw77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1599135300203!5m2!1sja!2sjp"
+                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <div class="explan">
-                    <dl>
-                        <dt>道順の説明</dt>
-                        <dd>①行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
-                        </dd>
-                        <dd>②行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
-                        </dd>
-                        <dd>③行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
-                        </dd>
-                    </dl>
+                <div class="explan txt_ja">
+                    <h4>道順の説明</h4>
+                    <ol >
+                        <li>①行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+                        </li>
+                        <li>②行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+                        </li>
+                        <li>③行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
     </section>
 </main>
+
 <footer>
     <div class="container">
-        <div class="footer_logo">LOGOLOGo</div>
+        <div class="footer_logo"><h1>LOGOLOGo</h1></div>
     </div>
 </footer>
+
 <script type="text/javascript" src="script.js"></script>
 </body>
 
