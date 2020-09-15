@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'objectiveextra_bold';
+    src: url('font/objective-extrabold-webfont.woff2') format('woff2'),
+        url('font/objective-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'objectivebold_italic';
+    src: url('font/objective-bold-italic-webfont.woff2') format('woff2'),
+        url('font/objective-bold-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'objectivemedium';
+    src: url('font/objective-medium-webfont.woff2') format('woff2'),
+        url('font/objective-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'objectiveregular';
+    src: url('font/objective-regular-webfont.woff2') format('woff2'),
+        url('font/objective-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$max_width:1280px;
+$break_sp: 640px;
+$main_color:#7AD6BB;
+$title_color: #000000;
+$txt_color:#454545;
+$accent_color:#fff;
+$main_font:"objectiveregular",
+"游ゴシック体",
+YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+
+$sub_font: "筑紫B丸ゴシック",
+"游ゴシック体",
+YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+
+$yu_font: YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+
+$eng_font:'Noto Sans JP',
+sans-serif;
+
+/* 変数宣言 */
+
+@mixin max-screen($break-point) {
+    @media screen and (max-width: $break-point) {
+        @content;
+    }
+}
+
+html {
+    font-size: 62.5%; // 10px
+    // font-size: 0.99vw;
+    // font-size: 0.78vw;
+
+    // @include min-screen($break_web) {
+    //     font-size: 10px;
+    // }
+
+    // @include max-screen($break_sp) {
+    //     font-size: 0.99vw;
+    // }
+}
+
+body {
+    width: 100%;
+    background-color: $accent_color;
+    font-family: $main_font;
+    letter-spacing: 0;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+@mixin font_size_calc ($min_size, $max_size, $min_screen_width : 64rem, $max_screen_width: 128rem) {
+    $x: $min_screen_width / 100;
+    $x2: (100 * ($max_size - $min_size) / ($max_screen_width - $min_screen_width));
+
+    font-size: calc(#{$min_size} + ((1vw - #{$x}) * #{$x2}));
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1004px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($break_sp) {
+        width: 96%;
+    }
+}
+
+.header {
+    &_bg {
+        position: relative;
+        height: 578px;
+        overflow: hidden;
+    }
+
+    &_video {
+        width: 100%;
+        height: 578px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        // background-size: cover;
+        // background-position: center center;
+        // vertical-align: middle;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_logo {
+        font-family: $main_font;
+        font-size: 42px;
+        letter-spacing: 0.05em;
+        line-height: 1.19;
+        color: $accent_color;
+
+        position: absolute;
+        top: 36px;
+        left: 36px;
+        display: block;
+        max-width: $max_width;
+    }
+
+    &_titile {
+        position: relative;
+        margin: 0 12.5%;
+
+        .title {
+            position: absolute;
+
+            font-family: "objectivebold_italic";
+            font-size: 180px;
+            letter-spacing: 0;
+            line-height: 1.22;
+            color: $main_color;
+
+            &:nth-child(1) {
+                top: -187px;
+                // left: 127px;
+                left: 0px;
+            }
+
+            &:nth-child(2) {
+                top: 0px;
+                // left: 127px;
+                left: 0px;
+            }
+        }
+    }
+}
