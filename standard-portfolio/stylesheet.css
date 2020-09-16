@@ -3,34 +3,29 @@
   font-family: 'objectiveextra_bold';
   src: url("font/objective-extrabold-webfont.woff2") format("woff2"), url("font/objective-extrabold-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: 'objectivebold_italic';
   src: url("font/objective-bold-italic-webfont.woff2") format("woff2"), url("font/objective-bold-italic-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: 'objectivemedium';
   src: url("font/objective-medium-webfont.woff2") format("woff2"), url("font/objective-medium-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: 'objectiveregular';
   src: url("font/objective-regular-webfont.woff2") format("woff2"), url("font/objective-regular-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 /* 変数宣言 */
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   width: 100%;
@@ -38,30 +33,23 @@ body {
   font-family: "objectiveregular", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   letter-spacing: 0;
   font-size: 1.6rem;
-  line-height: 2;
-}
+  line-height: 2; }
 
 li {
-  list-style: none;
-}
+  list-style: none; }
 
 .container {
   max-width: 1004px;
   width: 100%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 640px) {
-  .container {
-    width: 96%;
-  }
-}
+  margin: 0 auto; }
+  @media screen and (max-width: 640px) {
+    .container {
+      width: 96%; } }
 
 .header_bg {
   position: relative;
   height: 578px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .header_video {
   width: 100%;
@@ -73,9 +61,7 @@ li {
   z-index: -100;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
 .header_logo {
   font-family: "objectiveregular", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
@@ -87,30 +73,21 @@ li {
   top: 36px;
   left: 36px;
   display: block;
-  max-width: 1280px;
-}
+  max-width: 1280px; }
 
 .header_titile {
   position: relative;
-  margin: 0 12.5%;
-}
-
-.header_titile .title {
-  position: absolute;
-  font-family: "objectivebold_italic";
-  font-size: 180px;
-  letter-spacing: 0;
-  line-height: 1.22;
-  color: #7AD6BB;
-}
-
-.header_titile .title:nth-child(1) {
-  top: -187px;
-  left: 0px;
-}
-
-.header_titile .title:nth-child(2) {
-  top: 0px;
-  left: 0px;
-}
-/*# sourceMappingURL=stylesheet.css.map */
+  margin: 0 12.5%; }
+  .header_titile .title {
+    position: absolute;
+    font-family: "objectivebold_italic";
+    font-size: 180px;
+    letter-spacing: 0;
+    line-height: 1.22;
+    color: #7AD6BB; }
+    .header_titile .title:nth-child(1) {
+      top: -187px;
+      left: 0px; }
+    .header_titile .title:nth-child(2) {
+      top: 0px;
+      left: 0px; }
