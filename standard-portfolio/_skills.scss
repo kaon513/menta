@@ -1,0 +1,220 @@
+.skills {
+  background-color: #F2F2F2;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  // height: 200.5rem;
+  // max-height: 2005px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // vertical-align: middle;
+  // padding: 145px 0 239px;
+  padding: 14.5rem 0 23.9rem;
+  z-index: -2;
+
+  &_contents {
+    // width: 100%;
+    // max-width: 1280px;
+    // margin: 0 auto;
+
+    &_bg {
+      position: relative;
+      // z-index: 3;
+      // width: 100%;
+      text-align: center;
+      margin: clamp(15px, 11.5rem, 115px) 0 clamp(14px, 12.9rem, 129px) 0;
+      // height: 56.7rem;
+      // height: 50%;
+      // display: flex;
+
+
+
+      &::before {
+        content: "";
+        // background-color: $main_color;
+        position: absolute;
+        width: 65.3%;
+        // max-width: 837px;
+        // height: 452px;
+        height: 35vw;
+        // height: 55%;
+        // max-height: 452px;
+        background-color: $main_color;
+        z-index: -1;
+        // top: clamp(16px,2rem, 20px);
+        left: 0;
+      }
+    }
+  }
+
+  &_bg {
+    // width: 837px;
+    width: 65.3%;
+    max-width: 837px;
+    // height: 452px;
+    height: 35vw;
+    height: 55%;
+    max-height: 452px;
+    background-color: $main_color;
+    // z-index: -1;
+    position: absolute;
+    // position: relative;
+  }
+
+  &_cards {
+    display: flex;
+    justify-content: space-between;
+    // padding: 0 128px;
+    // position: absolute;
+    // z-index: 2;
+    // top: 307px;
+    // top:24%;
+    // top: clamp(30px ,30.7rem, 307px);
+    // left: 50%;
+    // width: 100%;
+    // width: 80%;
+    // max-width: 1025px;
+    // transform: translateX(-50%);
+    // flex-direction: inherit;
+    // height: 50%;
+    overflow: hidden;
+    // //&.se {
+    // &:nth-child(2n){
+    //   flex-direction: row-se;
+    // }
+    margin: 5.7rem 10% 0;
+
+    @include max-screen($break_sp) {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .cards {
+    &_bg {
+      // position: absolute;
+      position: relative;
+      // z-index: 3;
+      width: 100%;
+      text-align: center;
+      // margin: 115px 0 129px;
+      margin: clamp(15px ,11.5rem, 115px) 0 clamp(14px ,12.9rem, 129px);
+      // height: 567px;
+      height: 56.7rem;
+      height: 50%;
+      display: flex;
+
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &_ul {
+      width: 100%;
+      margin: 0 auto;
+      // display: flex;
+      height: 100%;
+    }
+
+    // &_ttl {
+    //   // position: absolute;
+    //   // z-index: 1;
+    //   // left:227px;
+    //   width: 837px;
+    // }
+    &_img {
+      width: 48%;
+      @include max-screen($break_sp) {
+        width: 100%;
+      }
+    }
+
+    &_txt {
+      @include txt_font();
+      // width: 42rem;
+      width: 40%;
+      max-width: 420px;
+      // font-family: $sub_font;
+      // font-size: clamp(16px,2rem, 20px);
+      // letter-spacing: 0;
+      // line-height: 2;
+      // color: $txt_color;
+      overflow: hidden;
+      @include max-screen($break_sp) {
+        width: 100%;
+        // font-size: 10px;
+        line-height: 1.3;
+      }
+    }
+
+    &_dt {
+      font-family: $medium_font;
+    }
+  }
+
+  &_bg_txt {
+    // writing-mode: vertical-rl;
+    position: absolute;
+    // z-index: 4;
+    font-family: $main_font;
+    font-size: clamp(30px,30rem, 300px);
+    letter-spacing: 0;
+    // line-height: 0.733;
+    color: $accent_color;
+    // left: 0;
+    // transform: translateX(-50%);
+    transform-origin: left bottom;
+    transform: rotate(90deg) translateY(50%);
+    line-height: 0.7;
+  }
+}
+
+.number {
+  // position: absolute;
+  padding-top: clamp(20px,11.9rem, 119px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 65.3%;
+  max-width: 837px;
+
+  &_ttl {
+    // font-size: clamp(16px,3.2rem, 32px);
+    font-size: clamp(14px,3.2rem, 32px);
+  }
+
+  &_value {
+    font-family: $main_font;
+    font-size: clamp(20px,10rem, 100px);
+    line-height: 1.3;
+
+    span {
+      font-size: clamp(16px,2rem, 20px);
+      vertical-align: text-top;
+    }
+  }
+
+  .contents_wrap {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.reverse{
+  display: flex;
+  flex-direction: row-reverse;
+
+  &_bg::before{
+    right: 0;
+    left:auto;
+  }
+
+  @include max-screen($break_sp) {
+    flex-direction: column;
+  }
+}
