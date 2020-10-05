@@ -1,0 +1,306 @@
+@charset "UTF-8";
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+dl dt,
+dl dd {
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.txt_ja {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 2;
+}
+
+.container {
+  width: 1004px;
+  margin: 0 auto;
+}
+
+header {
+  height: 102px;
+  background-image: url(img/top.png);
+  background-size: cover;
+  height: 806px;
+  position: relative;
+  color: #fff;
+}
+header .header_nav {
+  display: flex;
+}
+header .header_ttl {
+  position: absolute;
+  top: 360px;
+  left: 138px;
+}
+header .header_ttl h1 {
+  font-size: 64px;
+  letter-spacing: 0em;
+  line-height: 1.25;
+  /* line spacing px / font-size px*/
+  font-weight: 700;
+}
+header .header_ttl p {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+header .header_logo {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+}
+header .header_logo h2 {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+header .header_logo p {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+header .header_list {
+  margin-left: auto;
+  position: absolute;
+  right: 27px;
+}
+header .header_list li {
+  float: left;
+  margin: 30px 0 30px 63px;
+  font-size: 18px;
+  letter-spacing: 0em;
+}
+header .header_list li a {
+  text-decoration: none;
+  color: #fff;
+}
+header .header_list li a:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #fff;
+}
+header .header_list_sp {
+  display: none;
+}
+
+#top_arrow {
+  position: absolute;
+  bottom: 32.3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ttl h3 {
+  position: relative;
+  padding-bottom: 28px;
+  font-size: 48px;
+  letter-spacing: 0.02em;
+  /* av /1000*/
+}
+.ttl h3:after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  width: 69px;
+  left: 0px;
+  border-bottom: 5px solid #0A0A0A;
+}
+.ttl p {
+  font-weight: bold;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* 子要素をflexboxにより中央に配置する */
+  padding: 146px 0 154px 0;
+  width: 100%;
+}
+.about .ttl {
+  width: 409px;
+  background-color: #F2F2F2;
+  padding: 77px 68px 58px 68px;
+  border: 1px solid #707070;
+}
+.about .ttl dt {
+  margin-top: 43px;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0em;
+  line-height: 1.7;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  /*均等に間隔をあける*/
+  flex-wrap: wrap;
+}
+
+.content {
+  width: 324px;
+}
+.content figure img {
+  margin: 23px 0px;
+}
+.content .img_ttl {
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+}
+.content h4 {
+  font-size: 24px;
+  margin: 34px 0 18px 0;
+}
+.content .item_txt {
+  /* line spacing px / font-size px*/
+  overflow: hidden;
+}
+
+.blog {
+  background-color: #F2F2F2;
+  padding: 136px 0;
+}
+.blog_date {
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  line-height: 2;
+  /* line spacing px / font-size px*/
+  font-weight: bold;
+  margin-right: 16px;
+}
+.blog_ttl, .blog_txt {
+  letter-spacing: 0.01em;
+  /* line spacing px / font-size px*/
+}
+.blog li:nth-child(3) {
+  display: none;
+}
+
+.price_content {
+  margin: 160px 0px 149px 0px;
+  position: relative;
+  padding-bottom: 428px;
+}
+.price .ttl {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 55px;
+  text-align: center;
+  width: 494px;
+  border: 5px solid #A38787;
+}
+.price .ttl h3:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.price table {
+  margin: 81px 85px 67.4px 85px;
+  width: 324px;
+  border-collapse: collapse;
+}
+.price table tr {
+  border-bottom: 1px dotted #707070;
+  line-height: 3;
+}
+.price table th {
+  width: 50%;
+  text-align: left;
+}
+.price table td {
+  width: 50%;
+  text-align: right;
+  font-weight: bold;
+}
+.price .price_img {
+  position: absolute;
+  right: 0;
+  top: 93px;
+  z-index: -1;
+  width: 663px;
+}
+
+.access {
+  padding: 140px 0 184px 0;
+}
+.access .map {
+  margin-top: 93px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.access .map dt {
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+.access .map dd {
+  margin-bottom: 35px;
+}
+.access .map iframe {
+  width: 66%;
+  height: auto;
+  border: 1px solid #707070;
+}
+.access .map .ex_direction {
+  display: none;
+}
+.access .explan {
+  display: flexbox;
+  flex-direction: column;
+  width: 751px;
+  margin: 152px auto 0 auto;
+}
+.access .explan h4 {
+  font-size: 24px;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+.access .explan li {
+  margin-bottom: 35px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+footer {
+  height: 264px;
+  background-color: #6F6565;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer_logo h1 {
+  color: #fff;
+  font-size: 80px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  overflow: hidden;
+  text-align: center;
+}
