@@ -1,0 +1,616 @@
+$break_web: 1280px;
+$break_sp: 640px;
+$main_color:#C4CCEB;
+$sub_color: #fff;
+$main_font:"筑紫A丸ゴシック",
+"筑紫B丸ゴシック",
+"游ゴシック体",
+YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+$sub_font: "筑紫B丸ゴシック",
+"游ゴシック体",
+YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+$yu_font: YuGothic,
+"游ゴシック",
+"Yu Gothic",
+"メイリオ",
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+sans-serif;
+$eng_font:'Montserrat',
+sans-serif;
+/* 変数宣言 */
+
+/* $break-point以下の時に@contentを適用 */
+@mixin max-screen($break-point) {
+    @media screen and (max-width: $break-point) {
+        @content;
+    }
+}
+
+/* $break-point以上の時に@contentを適用 */
+@mixin min-screen($break-point) {
+    @media screen and (min-width: $break-point) {
+        @content;
+    }
+}
+
+html {
+    font-size: 62.5%; // 10px
+    // font-size: 0.99vw;
+    // font-size: 0.78vw;
+
+    // @include min-screen($break_web) {
+    //     font-size: 10px;
+    // }
+
+    // @include max-screen($break_sp) {
+    //     font-size: 0.99vw;
+    // }
+}
+
+body {
+    width: 100%;
+    background-color: $main_color;
+    font-family: $main_font;
+    letter-spacing: 0;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+@mixin font_size_calc ($min_size, $max_size, $min_screen_width : 64rem, $max_screen_width: 128rem) {
+    $x: $min_screen_width / 100;
+    $x2: (100 * ($max_size - $min_size) / ($max_screen_width - $min_screen_width));
+
+    font-size: calc(#{$min_size} + ((1vw - #{$x}) * #{$x2}));
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1004px;
+    width: 78%;
+    margin: 0 auto;
+
+    @include max-screen($break_sp) {
+        width: 90%;
+    }
+}
+
+header {
+    text-align: center;
+    margin-top: 24px;
+    padding-bottom: 10rem;
+    position: relative;
+
+    @include max-screen($break_sp) {
+        // padding-bottom: 40rem;
+        padding-bottom: 15rem;
+    }
+
+    .site_name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 51.6px;
+            margin-right: 14.5px;
+        }
+    }
+
+    .titile {
+        text-align: left;
+        margin-top: 14rem;
+
+        @include min-screen($break_web) {
+            margin-top: 141px;
+        }
+
+        @include max-screen($break_sp) {
+            margin-top: 30px;
+        }
+
+        h1 span {
+            display: inline-block;
+            background-color: $sub_color;
+            margin-top: 2.6rem;
+            padding: 5rem 3.5rem;
+            line-height: 1;
+            font-family: $sub_font;
+
+            @include font_size_calc(2.6rem, 8rem);
+
+            @include min-screen($break_web) {
+                margin-top: 26px;
+                padding: 50px 35px;
+                font-size: 80px;
+            }
+
+            @include max-screen($break_sp) {
+                margin-top: 9px;
+                font-size: 26px;
+                padding: 15px;
+            }
+        }
+    }
+
+    #top_arrow {
+        position: absolute;
+        bottom: 32.3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 37px;
+    }
+}
+
+.start {
+    margin: 13rem 0px;
+    text-align: center;
+    @include font_size_calc(1.9rem, 5rem);
+    line-height: 4;
+    letter-spacing: 0.05rem;
+    font-family: $eng_font;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include min-screen($break_web) {
+        font-size: 50px;
+    }
+
+    @include max-screen($break_sp) {
+        font-size: 19px;
+        margin: 0px 0px 93px 0px;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        background-image: url(img/icon.png);
+        width: 67px;
+        height: 67px;
+
+        @include max-screen($break_sp) {
+            background-image: url(img/icon_sp.png);
+            width: 33px;
+            height: 33px;
+        }
+    }
+
+    &::before {
+        margin-right: 27px;
+
+        @include max-screen($break_sp) {
+            margin-right: 11px;
+        }
+    }
+
+    &::after {
+        margin-left: 27px;
+
+        @include max-screen($break_sp) {
+            margin-left: 11px;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contents {
+    .container {
+        padding-bottom: 834px;
+        position: relative;
+
+        @include max-screen($break_sp) {
+            padding-bottom: 485px;
+        }
+    }
+
+    li {
+        position: absolute;
+
+        @include font_size_calc(1.6rem, 3rem);
+        line-height: 1.7;
+        font-weight: bold;
+
+        @include min-screen($break_web) {
+            font-size: 30px;
+        }
+
+        @include max-screen($break_sp) {
+            font-size: 16px;
+        }
+
+        &:nth-child(1) {
+            top: 94px;
+            left: 50%;
+            transform: translateX(-90%);
+
+            @include max-screen($break_sp) {
+                top: 111px;
+                left: 0px;
+                transform: none;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 214px;
+            left: 0px;
+
+            @include max-screen($break_sp) {
+                top: 157px;
+                left: 0px;
+                transform: none;
+            }
+        }
+
+        &:nth-child(3) {
+            top: 273px;
+            right: 0px;
+
+            @include max-screen($break_sp) {
+                top: 203px;
+                left: 0px;
+                transform: none;
+            }
+        }
+
+        &:nth-child(4) {
+            top: 393px;
+            left: 50%;
+            transform: translateX(-67%);
+
+            @include max-screen($break_sp) {
+                top: 249px;
+                left: 0px;
+                transform: none;
+            }
+        }
+
+        &:nth-child(5) {
+            top: 513px;
+            left: 50%;
+            transform: translateX(-16%);
+
+            @include max-screen($break_sp) {
+                top: 295px;
+                left: 0px;
+                transform: none;
+            }
+        }
+
+        &:nth-child(6) {
+            top: 627px;
+            left: 50%;
+            transform: translateX(-100%);
+
+            @include max-screen($break_sp) {
+                top: 341px;
+                left: 0px;
+                transform: none;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 17%;
+
+        @include max-screen($break_sp) {
+            display: none;
+        }
+
+        &:nth-child(2) {
+            top: 307px;
+            left: 0;
+            transform: rotate(-10deg);
+        }
+
+        &:nth-child(3) {
+            top: 558px;
+            left: 50%;
+            transform: translateX(50%) rotate(30deg);
+        }
+    }
+}
+
+.result {
+    .container {
+        border: 15px solid $sub_color;
+        border-radius: 43px;
+        text-align: center;
+
+        padding: 5rem 13rem;
+
+        @include min-screen($break_web) {
+            font-size: 100px;
+        }
+
+        @include max-screen($break_sp) {
+            padding: 52px 31px 76px 31px;
+        }
+    }
+
+    h2 {
+        background-image: url(img/border.png);
+        background-position: bottom;
+
+        @include font_size_calc(8rem, 16rem);
+        line-height: 1.7;
+        font-weight: bold;
+
+        @include min-screen($break_web) {
+            font-size: 160px;
+        }
+
+        @include max-screen($break_sp) {
+            font-size: 80px;
+        }
+
+        span {
+            @include font_size_calc(5rem, 10rem);
+
+            @include min-screen($break_web) {
+                font-size: 100px;
+            }
+
+            @include max-screen($break_sp) {
+                font-size: 50px;
+            }
+        }
+    }
+
+    p {
+        text-align: left;
+        font-weight: bold;
+
+        padding: 52px 0 0 0;
+
+        @include font_size_calc(1.8rem, 3rem);
+        line-height: 1.7;
+        font-weight: bold;
+
+        @include min-screen($break_web) {
+            font-size: 30px;
+        }
+
+        @include max-screen($break_sp) {
+            font-size: 18px;
+        }
+    }
+}
+
+.book {
+    text-align: center;
+
+    h2 {
+        position: relative;
+
+        @include font_size_calc(2.3rem, 8rem);
+        letter-spacing: 0.7rem;
+
+        @include min-screen($break_web) {
+            font-size: 80px;
+        }
+
+        @include max-screen($break_sp) {
+            font-size: 23px;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            border-bottom: 1.3rem solid $sub_color;
+            width: 9.5rem;
+
+            border-radius: 11px;
+            transform: rotate(55deg);
+
+            @include min-screen($break_web) {
+                border-bottom: 13px solid $sub_color;
+                width: 95px;
+            }
+
+            @include max-screen($break_sp) {
+                border-bottom: 3.85px solid $sub_color;
+                width: 28px;
+            }
+        }
+
+        &:after {
+            left: auto;
+            right: 0px;
+            transform: rotate(-55deg);
+        }
+    }
+
+    .wrapper {
+        margin: 8.2rem 0 24.6rem 0;
+
+        @include max-screen($break_sp) {
+            margin-bottom: 111px;
+        }
+    }
+
+    &_content_l {
+        width: 32%;
+
+        img {
+            box-shadow: 10px -13px #000000;
+            width: 100%;
+        }
+
+        @include max-screen($break_sp) {
+            width: 100%;
+            margin-bottom: 70px;
+        }
+    }
+
+    &_content_r {
+        width: 57%;
+
+        @include max-screen($break_sp) {
+            width: 100%;
+        }
+
+        p {
+            text-align: left;
+            margin-bottom: 5rem;
+            font-weight: bold;
+            font-family: $yu_font;
+
+            @include font_size_calc(1.6rem, 2rem);
+            line-height: 1.7;
+
+            @include min-screen($break_web) {
+                font-size: 20px;
+            }
+
+            @include max-screen($break_sp) {
+                font-size: 16px;
+            }
+        }
+
+        .margin_b_0 {
+            margin-bottom: 0;
+        }
+
+        a {
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            max-width: 401px;
+            border-radius: 1em;
+            background-color: $sub_color;
+            padding: .4em 0;
+            font-size: 4rem;
+            box-shadow: .225em .175em #000000;
+            font-family: $eng_font;
+            line-height: 1.225;
+            letter-spacing: 0;
+            text-decoration: none;
+            color: #000000;
+
+            &:hover {
+                box-shadow: none;
+                color: $sub_color;
+                background-color: #000000;
+            }
+        }
+    }
+}
+
+.member {
+    background-color: $sub_color;
+    padding-bottom: 189px;
+
+    .wrapper {
+        justify-content: space-around;
+    }
+
+    &_content {
+        width: 34%;
+
+        @include min-screen($break_web) {
+            width: 335px;
+        }
+
+        @include max-screen($break_sp) {
+            width: 100%
+        }
+
+        figure {
+            margin: 8.7rem 0px;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+
+            @include max-screen($break_sp) {
+                margin: 124px auto 39px auto;
+                width: 246px;
+            }
+        }
+
+        h4 {
+            font-size: 32px;
+            margin-bottom: 3.6rem;
+
+            @include max-screen($break_sp) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_txt,
+    &_url {
+        font-weight: bold;
+        font-family: $yu_font;
+        line-height: 1.7;
+    }
+
+    &_txt {
+        overflow: hidden;
+        margin: 3.6rem 0;
+
+        @include max-screen($break_sp) {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+        }
+    }
+
+    &_url {
+        @include max-screen($break_sp) {
+            font-size: 15px;
+        }
+    }
+}
+
+.footer {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-family: $yu_font;
+        font-weight: bold;
+
+        li {
+            padding: 0 30px;
+
+            @include max-screen($break_sp) {
+                padding: 0 10px;
+            }
+        }
+
+        margin: 11rem 0;
+
+        @include max-screen($break_sp) {
+            margin: 22px 0;
+        }
+    }
+}

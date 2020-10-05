@@ -1,0 +1,668 @@
+@charset "UTF-8";
+/* 変数宣言 */
+/* $break-point以下の時に@contentを適用 */
+/* $break-point以上の時に@contentを適用 */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  background-color: #C4CCEB;
+  font-family: "筑紫A丸ゴシック", "筑紫B丸ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  letter-spacing: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1004px;
+  width: 78%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+}
+
+header {
+  text-align: center;
+  margin-top: 24px;
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    padding-bottom: 15rem;
+  }
+}
+
+header .site_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .site_name img {
+  width: 51.6px;
+  margin-right: 14.5px;
+}
+
+header .titile {
+  text-align: left;
+  margin-top: 14rem;
+}
+
+@media screen and (min-width: 1280px) {
+  header .titile {
+    margin-top: 141px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header .titile {
+    margin-top: 30px;
+  }
+}
+
+header .titile h1 span {
+  display: inline-block;
+  background-color: #fff;
+  margin-top: 2.6rem;
+  padding: 5rem 3.5rem;
+  line-height: 1;
+  font-family: "筑紫B丸ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-size: calc(2.6rem + ((1vw - 0.64rem) * 8.4375));
+}
+
+@media screen and (min-width: 1280px) {
+  header .titile h1 span {
+    margin-top: 26px;
+    padding: 50px 35px;
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header .titile h1 span {
+    margin-top: 9px;
+    font-size: 26px;
+    padding: 15px;
+  }
+}
+
+header #top_arrow {
+  position: absolute;
+  bottom: 32.3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 37px;
+}
+
+.start {
+  margin: 13rem 0px;
+  text-align: center;
+  font-size: calc(1.9rem + ((1vw - 0.64rem) * 4.84375));
+  line-height: 4;
+  letter-spacing: 0.05rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .start {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .start {
+    font-size: 19px;
+    margin: 0px 0px 93px 0px;
+  }
+}
+
+.start::before, .start::after {
+  content: "";
+  display: inline-block;
+  background-image: url(img/icon.png);
+  width: 67px;
+  height: 67px;
+}
+
+@media screen and (max-width: 640px) {
+  .start::before, .start::after {
+    background-image: url(img/icon_sp.png);
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.start::before {
+  margin-right: 27px;
+}
+
+@media screen and (max-width: 640px) {
+  .start::before {
+    margin-right: 11px;
+  }
+}
+
+.start::after {
+  margin-left: 27px;
+}
+
+@media screen and (max-width: 640px) {
+  .start::after {
+    margin-left: 11px;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contents .container {
+  padding-bottom: 834px;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  .contents .container {
+    padding-bottom: 485px;
+  }
+}
+
+.contents li {
+  position: absolute;
+  font-size: calc(1.6rem + ((1vw - 0.64rem) * 2.1875));
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1280px) {
+  .contents li {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contents li {
+    font-size: 16px;
+  }
+}
+
+.contents li:nth-child(1) {
+  top: 94px;
+  left: 50%;
+  -webkit-transform: translateX(-90%);
+          transform: translateX(-90%);
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(1) {
+    top: 111px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents li:nth-child(2) {
+  top: 214px;
+  left: 0px;
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(2) {
+    top: 157px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents li:nth-child(3) {
+  top: 273px;
+  right: 0px;
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(3) {
+    top: 203px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents li:nth-child(4) {
+  top: 393px;
+  left: 50%;
+  -webkit-transform: translateX(-67%);
+          transform: translateX(-67%);
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(4) {
+    top: 249px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents li:nth-child(5) {
+  top: 513px;
+  left: 50%;
+  -webkit-transform: translateX(-16%);
+          transform: translateX(-16%);
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(5) {
+    top: 295px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents li:nth-child(6) {
+  top: 627px;
+  left: 50%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media screen and (max-width: 640px) {
+  .contents li:nth-child(6) {
+    top: 341px;
+    left: 0px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.contents img {
+  position: absolute;
+  width: 17%;
+}
+
+@media screen and (max-width: 640px) {
+  .contents img {
+    display: none;
+  }
+}
+
+.contents img:nth-child(2) {
+  top: 307px;
+  left: 0;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.contents img:nth-child(3) {
+  top: 558px;
+  left: 50%;
+  -webkit-transform: translateX(50%) rotate(30deg);
+          transform: translateX(50%) rotate(30deg);
+}
+
+.result .container {
+  border: 15px solid #fff;
+  border-radius: 43px;
+  text-align: center;
+  padding: 5rem 13rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .result .container {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .result .container {
+    padding: 52px 31px 76px 31px;
+  }
+}
+
+.result h2 {
+  background-image: url(img/border.png);
+  background-position: bottom;
+  font-size: calc(8rem + ((1vw - 0.64rem) * 12.5));
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1280px) {
+  .result h2 {
+    font-size: 160px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .result h2 {
+    font-size: 80px;
+  }
+}
+
+.result h2 span {
+  font-size: calc(5rem + ((1vw - 0.64rem) * 7.8125));
+}
+
+@media screen and (min-width: 1280px) {
+  .result h2 span {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .result h2 span {
+    font-size: 50px;
+  }
+}
+
+.result p {
+  text-align: left;
+  font-weight: bold;
+  padding: 52px 0 0 0;
+  font-size: calc(1.8rem + ((1vw - 0.64rem) * 1.875));
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1280px) {
+  .result p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .result p {
+    font-size: 18px;
+  }
+}
+
+.book {
+  text-align: center;
+}
+
+.book h2 {
+  position: relative;
+  font-size: calc(2.3rem + ((1vw - 0.64rem) * 8.90625));
+  letter-spacing: 0.7rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .book h2 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .book h2 {
+    font-size: 23px;
+  }
+}
+
+.book h2:before, .book h2:after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  border-bottom: 1.3rem solid #fff;
+  width: 9.5rem;
+  border-radius: 11px;
+  -webkit-transform: rotate(55deg);
+          transform: rotate(55deg);
+}
+
+@media screen and (min-width: 1280px) {
+  .book h2:before, .book h2:after {
+    border-bottom: 13px solid #fff;
+    width: 95px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .book h2:before, .book h2:after {
+    border-bottom: 3.85px solid #fff;
+    width: 28px;
+  }
+}
+
+.book h2:after {
+  left: auto;
+  right: 0px;
+  -webkit-transform: rotate(-55deg);
+          transform: rotate(-55deg);
+}
+
+.book .wrapper {
+  margin: 8.2rem 0 24.6rem 0;
+}
+
+@media screen and (max-width: 640px) {
+  .book .wrapper {
+    margin-bottom: 111px;
+  }
+}
+
+.book_content_l {
+  width: 32%;
+}
+
+.book_content_l img {
+  -webkit-box-shadow: 10px -13px #000000;
+          box-shadow: 10px -13px #000000;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .book_content_l {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+}
+
+.book_content_r {
+  width: 57%;
+}
+
+@media screen and (max-width: 640px) {
+  .book_content_r {
+    width: 100%;
+  }
+}
+
+.book_content_r p {
+  text-align: left;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  font-family: YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-size: calc(1.6rem + ((1vw - 0.64rem) * 0.625));
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 1280px) {
+  .book_content_r p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .book_content_r p {
+    font-size: 16px;
+  }
+}
+
+.book_content_r .margin_b_0 {
+  margin-bottom: 0;
+}
+
+.book_content_r a {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 401px;
+  border-radius: 1em;
+  background-color: #fff;
+  padding: .4em 0;
+  font-size: 4rem;
+  -webkit-box-shadow: .225em .175em #000000;
+          box-shadow: .225em .175em #000000;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.225;
+  letter-spacing: 0;
+  text-decoration: none;
+  color: #000000;
+}
+
+.book_content_r a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  background-color: #000000;
+}
+
+.member {
+  background-color: #fff;
+  padding-bottom: 189px;
+}
+
+.member .wrapper {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.member_content {
+  width: 34%;
+}
+
+@media screen and (min-width: 1280px) {
+  .member_content {
+    width: 335px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .member_content {
+    width: 100%;
+  }
+}
+
+.member_content figure {
+  margin: 8.7rem 0px;
+  text-align: center;
+}
+
+.member_content figure img {
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .member_content figure {
+    margin: 124px auto 39px auto;
+    width: 246px;
+  }
+}
+
+.member_content h4 {
+  font-size: 32px;
+  margin-bottom: 3.6rem;
+}
+
+@media screen and (max-width: 640px) {
+  .member_content h4 {
+    margin-bottom: 0;
+  }
+}
+
+.member_txt, .member_url {
+  font-weight: bold;
+  font-family: YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.7;
+}
+
+.member_txt {
+  overflow: hidden;
+  margin: 3.6rem 0;
+}
+
+@media screen and (max-width: 640px) {
+  .member_txt {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .member_url {
+    font-size: 15px;
+  }
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-family: YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: bold;
+  margin: 11rem 0;
+}
+
+.footer ul li {
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .footer ul li {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer ul {
+    margin: 22px 0;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
